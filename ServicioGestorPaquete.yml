@@ -1,0 +1,19 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: ServicioGestorPaquete
+  datasource:
+    url: jdbc:mysql://localhost:3306/paquete?useSSL=false&serverTimezone=UTC
+    username: root
+    # password: [TU_CONTRASEÑA_AQUI] # Nota: No estaba en tu properties original
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQLDialect
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
